@@ -1,11 +1,33 @@
 {
-  "devDependencies": {
-    "vitepress": "^1.4.1"
-  },
-  "packageManager": "yarn@4.5.1",
+  "name": "docs-suzublog",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --open",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  }
+    "docs:preview": "vitepress preview docs --open",
+    "format": "prettier --write .",
+    "lint": "eslint . --ignore-pattern docs/.vitepress/cache --ignore-pattern prettier.config.cjs",
+    "lint:fix": "eslint --fix . --ignore-pattern docs/.vitepress/cache --ignore-pattern prettier.config.cjs",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@zl-asica/prettier-config": "^1.0.9",
+    "eslint": "^9.16.0",
+    "eslint-config-zl-asica": "^1.0.20",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.2",
+    "vitepress": "^1.5.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "pnpm@9.15.0"
 }

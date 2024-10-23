@@ -1,28 +1,162 @@
-import { defineConfig } from 'vitepress'
+import type { HeadConfig } from 'vitepress';
+import { defineConfig } from 'vitepress';
 
-// https://vitepress.dev/reference/site-config
+const sharedThemeConfig = {
+  socialLinks: [
+    { icon: 'github', link: 'https://github.com/ZL-Asica/SuzuBlog' },
+  ],
+  search: {
+    provider: 'local' as const,
+  },
+  footer: {
+    message: {
+      zh: '此文档基于 CC BY 4.0 进行授权',
+      en: 'This docs Licensed under CC BY 4.0',
+    },
+    copyright: {
+      zh: '©️ 2024-Present <a href="https://www.zla.pub" target="_blank">ZL Asica</a> 版权所有',
+      en: 'Copyright ©️ 2024-Present <a href="https://www.zla.pub" target="_blank">ZL Asica</a>',
+    },
+  },
+};
+
+const sharedHeadConfig = {
+  zh: [
+    ['meta', { name: 'description', content: 'SuzuBlog 的文档站点' }],
+    [
+      'meta',
+      { name: 'keywords', content: 'SuzuBlog, 文档, VuePress, Next.js' },
+    ],
+    ['meta', { property: 'og:description', content: 'SuzuBlog 的文档站点' }],
+  ] as HeadConfig[],
+  en: [
+    ['meta', { name: 'description', content: 'SuzuBlog Docs' }],
+    [
+      'meta',
+      { name: 'keywords', content: 'SuzuBlog, Docs, VuePress, Next.js' },
+    ],
+    ['meta', { property: 'og:description', content: 'SuzuBlog Docs' }],
+  ] as HeadConfig[],
+};
+
+const sharedNavConfig = {
+  zh: [
+    { text: '首页', link: '/' },
+    { text: '指南', link: '/guide' },
+  ],
+  en: [
+    { text: 'Home', link: '/en/' },
+    { text: 'Guide', link: '/en/guide' },
+  ],
+};
+
+const sharedSidebarConfig = {
+  zh: [
+    {
+      items: [
+        { text: '快速开始', link: '/guide/' },
+        { text: '常见问题', link: '/guide/faq' },
+      ],
+    },
+    {
+      text: 'config.yml',
+      items: [{ text: '配置', link: '/guide/config' }],
+    },
+  ],
+  en: [
+    {
+      items: [
+        { text: 'Quick Start', link: '/en/guide/' },
+        { text: 'FAQ', link: '/en/guide/faq' },
+      ],
+    },
+    {
+      text: 'config.yml',
+      items: [{ text: 'Config', link: '/en/guide/config' }],
+    },
+  ],
+};
+
 export default defineConfig({
-  title: "Suzu Blog",
-  description: "Documentation site for Suzu Blog",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
+  title: 'SuzuBlog Docs',
+  head: [
+    ['meta', { name: 'author', content: 'ZL Asica' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'link',
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon-96x96.png',
+        sizes: '96x96',
+      },
     ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+    ],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+    ],
+    [
+      'link',
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
+    ['meta', { property: 'og:title', content: 'SuzuBlog Docs' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://suzu.zla.app' }],
+    [
+      'meta',
+      {
+        property: 'og:image',
+        content: 'https://suzu.zla.app/apple-touch-icon.png',
+      },
+    ],
+    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
+  ],
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      link: '/',
+      head: sharedHeadConfig.zh,
+      themeConfig: {
+        nav: sharedNavConfig.zh,
+        sidebar: sharedSidebarConfig.zh,
+        socialLinks: sharedThemeConfig.socialLinks,
+        search: sharedThemeConfig.search,
+        footer: {
+          message: sharedThemeConfig.footer.message.zh,
+          copyright: sharedThemeConfig.footer.copyright.zh,
+        },
+      },
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      themeConfig: {
+        nav: sharedNavConfig.en,
+        sidebar: sharedSidebarConfig.en,
+        socialLinks: sharedThemeConfig.socialLinks,
+        search: sharedThemeConfig.search,
+        footer: {
+          message: sharedThemeConfig.footer.message.en,
+          copyright: sharedThemeConfig.footer.copyright.en,
+        },
+      },
+    },
+  },
+});
