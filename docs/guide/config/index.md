@@ -1,4 +1,4 @@
-# 配置指南：`config.yml`
+# `config.yml`
 
 本文档将逐步介绍 **`config.yml`** 文件中的各项配置，帮助你快速设置和定制 SuzuBlog。
 

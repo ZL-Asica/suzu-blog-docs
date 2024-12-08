@@ -1,4 +1,4 @@
-# Configuration Guide: `config.yml`
+# `config.yml`
 
 This document provides a step-by-step explanation of the **`config.yml`** file to help you quickly set up and customize SuzuBlog.
 

@@ -18,6 +18,9 @@ const sharedThemeConfig = {
       en: 'Copyright ©️ 2024-Present <a href="https://www.zla.pub" target="_blank">ZL Asica</a>',
     },
   },
+  editLink: {
+    patter: 'https://github.com/ZL-Asica/docs-SuzuBlog/edit/main/docs/:path',
+  },
 };
 
 const sharedHeadConfig = {
@@ -59,8 +62,19 @@ const sharedSidebarConfig = {
       ],
     },
     {
-      text: 'config.yml',
-      items: [{ text: '配置', link: '/guide/config' }],
+      text: '配置文件',
+      items: [{ text: 'config.yml', link: '/guide/config' }],
+    },
+    {
+      text: '文章及页面',
+      items: [
+        { text: '文章', link: '/guide/posts/' },
+        { text: '_pages', link: '/guide/posts/pages' },
+        { text: '友情链接', link: '/guide/posts/friends' },
+      ],
+    },
+    {
+      items: [{ text: '参与贡献', link: '/guide/contribution' }],
     },
   ],
   en: [
@@ -71,8 +85,19 @@ const sharedSidebarConfig = {
       ],
     },
     {
-      text: 'config.yml',
-      items: [{ text: 'Config', link: '/en/guide/config' }],
+      text: 'Config Files',
+      items: [{ text: 'config.yml', link: '/en/guide/config' }],
+    },
+    {
+      text: 'Posts & Pages',
+      items: [
+        { text: 'Posts', link: '/en/guide/posts/' },
+        { text: '_pages', link: '/en/guide/posts/pages' },
+        { text: 'Friends', link: '/en/guide/posts/friends' },
+      ],
+    },
+    {
+      items: [{ text: 'Contribution', link: '/en/guide/contribution' }],
     },
   ],
 };
@@ -141,6 +166,10 @@ export default defineConfig({
           message: sharedThemeConfig.footer.message.zh,
           copyright: sharedThemeConfig.footer.copyright.zh,
         },
+        editLink: {
+          text: '在 GitHub 上编辑此页',
+          pattern: sharedThemeConfig.editLink.patter,
+        },
       },
     },
     en: {
@@ -156,7 +185,14 @@ export default defineConfig({
           message: sharedThemeConfig.footer.message.en,
           copyright: sharedThemeConfig.footer.copyright.en,
         },
+        editLink: {
+          pattern: sharedThemeConfig.editLink.patter,
+        },
       },
     },
+  },
+  lastUpdated: true,
+  sitemap: {
+    hostname: 'https://suzu.zla.app',
   },
 });

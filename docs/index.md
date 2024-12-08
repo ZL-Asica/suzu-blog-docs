@@ -11,8 +11,11 @@ hero:
       text: 快速开始 ✨
       link: /guide
     - theme: alt
-      text: 了解更多 📖
-      link: /api-examples
+      text: 开始写文章 📖
+      link: /guide/posts/
+    - theme: brand
+      text: 查看示例 🚀
+      link: 'https://www.zla.pub'
 
 features:
   - icon: 🛠️

@@ -9,10 +9,13 @@ hero:
   actions:
     - theme: brand
       text: Quick Start ✨
-      link: /en/Quick Start
+      link: /en/guide
     - theme: alt
-      text: Learn More 📖
-      link: /en/api-examples
+      text: Start Writing 📖
+      link: /en/guide/posts/
+    - theme: brand
+      text: View Demo 🚀
+      link: 'https://www.zla.pub'
 
 features:
   - icon: 🛠️
