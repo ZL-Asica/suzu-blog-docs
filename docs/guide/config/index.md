@@ -11,12 +11,10 @@ description: 'Suzu is a minimalist blog template with a serene sakura-inspired t
 keywords: 'Suzu, Next.js, markdown blog, Tailwind CSS, blog template, sakura, ZL Asica'
 author:
   name: 'ZL Asica'
-  link: 'https://www.zla.app'
+  link: 'https://www.zla.pub'
 lang: 'zh'
-siteUrl: 'https://suzu.zla.app'
+siteUrl: 'https://www.zla.pub'
 ```
-
-### 配置说明
 
 - **`title`**: 站点名称，显示在标题和 `meta` 标签中。
 - **`subTitle`**: 站点的副标题，通常用于补充描述。
@@ -35,8 +33,6 @@ slogan: "As long as the code or the developer is able to run, it's all good."
 googleAnalytics: G-659VZ9NH28
 ```
 
-### 配置说明
-
 - **`avatar`**: 头像图片路径，可以是相对路径或完整 URL。
 - **`background`**: 默认的背景图片路径，用于文章没有单独缩略图时显示。
 - **`slogan`**: 显示在首页的标语。
@@ -49,8 +45,6 @@ creativeCommons:
   type: CC BY-SA 4.0 Deed
   link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans
 ```
-
-### 配置说明
 
 - **`creativeCommons`**: 配置文章默认的版权许可，例如 `CC BY-SA 4.0`，链接到相应的许可证页面。
 
@@ -66,8 +60,6 @@ socialMedia:
   rss: true
 ```
 
-### 配置说明
-
 - 为你的社交媒体账号添加链接。
 - 留空某些字段可以隐藏对应的社交图标。
 - 支持的平台包括 GitHub、LinkedIn、Instagram、Telegram、Zhihu 等。
@@ -79,18 +71,16 @@ thumbnailAbout: false
 thumbnailFriends: false
 ```
 
-### 配置说明
-
 - **`thumbnailAbout`** 和 **`thumbnailFriends`**: 是否为“关于”页面或“友情链接”页面显示缩略图。
 
-## 💬 评论设置 (Disqus Settings)
+## 💬 评论设置 (Comments Settings)
 
 ```yaml
+twikooEnvId: https://xxx.vercel.app
 disqusShortname: 'zla-pub'
 ```
 
-### 配置说明
-
+- **`twikooEnvId`**: Twikoo 评论系统的云函数部署地址，具体请参考 [Twikoo 文档](https://twikoo.js.org/)。
 - **`disqusShortname`**: 用于集成 Disqus 评论系统的短名称（可从 Disqus 账户中获取）。
 
 ## 🔧 自定义代码 (Custom Code Blocks)
@@ -102,8 +92,6 @@ slotFooter: |
   <!-- Add your custom footer HTML here -->
 ```
 
-### 配置说明
-
 - **`headerJavascript`**: 在 `<head>` 中插入的自定义 JavaScript 文件。
 - **`slotFooter`**: 在 `<footer>` 中插入的自定义 HTML 代码。
 
@@ -112,8 +100,6 @@ slotFooter: |
 ```yaml
 startYear: 2017
 ```
-
-### 配置说明
 
 - **`startYear`**: 你的博客开始年份（可选）。如果不设置，将只显示当前年份。
 

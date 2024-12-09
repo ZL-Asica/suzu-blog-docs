@@ -21,6 +21,7 @@ categories:
   - 教程
 redirect: '/example-redirect'
 showComments: true
+showLicense: true
 autoSlug: true
 ---
 ```
@@ -40,6 +41,7 @@ autoSlug: true
 - **`categories`**: 文章分类数组，用于更高层次的内容组织（例如 `["Category1", "Category2"]`）。
 - **`redirect`**: 设置文章的跳转地址（例如 `"/new-url"`），适用于需要重定向的文章。（填写后，文章将不会显示内容，而是直接跳转到指定地址）
 - **`showComments`**: 是否显示评论功能，默认为 `true`。
+- **`showLicense`**: 是否显示文章的版权声明，默认为 `true`。
 - **`autoSlug`**: 是否自动生成文章的层级路径，默认为 `true`。（若设置为 `false`，将不会自动生成文章的层级路径，而是使用 markdown 文件内的标题）
 
 ## ✂️ 文章摘要截断

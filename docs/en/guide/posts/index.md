@@ -21,6 +21,7 @@ categories:
   - Tutorial
 redirect: '/example-redirect'
 showComments: true
+showLicense: true
 autoSlug: true
 ---
 ```
@@ -40,6 +41,7 @@ autoSlug: true
 - **`categories`**: An array of categories for higher-level content organization (e.g., `["Category1", "Category2"]`).
 - **`redirect`**: Specifies a redirection URL for the article (e.g., `"/new-url"`). If set, the article will not display its content but will redirect to the specified URL.
 - **`showComments`**: Whether to enable the comment section for the article. Defaults to `true`.
+- **`showLicense`**: Whether to display the article's license information. Defaults to `true`.
 - **`autoSlug`**: Whether to automatically generate hierarchical paths for the article. Defaults to `true`. (If set to `false`, the title inside the Markdown file will not be used for generating slugs.)
 
 ## ✂️ Article Summary Truncation

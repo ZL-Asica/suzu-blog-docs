@@ -11,9 +11,9 @@ description: 'Suzu is a minimalist blog template with a serene sakura-inspired t
 keywords: 'Suzu, Next.js, markdown blog, Tailwind CSS, blog template, sakura, ZL Asica'
 author:
   name: 'ZL Asica'
-  link: 'https://www.zla.app'
+  link: 'https://www.zla.pub'
 lang: 'zh'
-siteUrl: 'https://suzu.zla.app'
+siteUrl: 'https://www.zla.pub'
 ```
 
 ### Explanation
@@ -35,8 +35,6 @@ slogan: "As long as the code or the developer is able to run, it's all good."
 googleAnalytics: G-659VZ9NH28
 ```
 
-### Explanation
-
 - **`avatar`**: Path to the avatar image. This can be a relative path or a full URL.
 - **`background`**: The default background image used when posts lack individual thumbnails.
 - **`slogan`**: A slogan displayed on your homepage.
@@ -49,8 +47,6 @@ creativeCommons:
   type: CC BY-SA 4.0 Deed
   link: https://creativecommons.org/licenses/by-sa/4.0/deed.en
 ```
-
-### Explanation
 
 - **`creativeCommons`**: Configures the default license for posts, such as `CC BY-SA 4.0`. Links to the corresponding license page.
 
@@ -66,8 +62,6 @@ socialMedia:
   rss: true
 ```
 
-### Explanation
-
 - Add links to your social media accounts.
 - Leave fields empty to hide specific icons.
 - Supported platforms include GitHub, LinkedIn, Instagram, Telegram, Zhihu, and more.
@@ -79,18 +73,16 @@ thumbnailAbout: false
 thumbnailFriends: false
 ```
 
-### Explanation
-
 - **`thumbnailAbout`** and **`thumbnailFriends`**: Whether to display thumbnails for the "About" or "Friends" pages.
 
 ## 💬 Comments Settings (Disqus)
 
 ```yaml
+twikooEnvId: https://xxx.vercel.app
 disqusShortname: 'zla-pub'
 ```
 
-### Explanation
-
+- **`twikooEnvId`**: The Twikoo backend deployment address. Refer to the [Twikoo documentation](https://twikoo.js.org/) for details.
 - **`disqusShortname`**: The shortname used to integrate the Disqus comment system (can be found in your Disqus account).
 
 ## 🔧 Custom Code Blocks
@@ -102,8 +94,6 @@ slotFooter: |
   <!-- Add your custom footer HTML here -->
 ```
 
-### Explanation
-
 - **`headerJavascript`**: Custom JavaScript files to be included in the `<head>` section.
 - **`slotFooter`**: Custom HTML code to be included in the `<footer>` section.
 
@@ -112,8 +102,6 @@ slotFooter: |
 ```yaml
 startYear: 2017
 ```
-
-### Explanation
 
 - **`startYear`**: The start year of your blog (optional). If not set, only the current year will be displayed.
 
