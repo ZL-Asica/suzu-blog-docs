@@ -43,11 +43,13 @@ googleAnalytics: G-659VZ9NH28
 ## ✍️ Post Settings
 
 ```yaml
+postsPerPage: 5
 creativeCommons:
   type: CC BY-SA 4.0 Deed
   link: https://creativecommons.org/licenses/by-sa/4.0/deed.en
 ```
 
+- **`postsPerPage`**: The number of posts displayed per page. (Default/empty is 5, maximum is 15)
 - **`creativeCommons`**: Configures the default license for posts, such as `CC BY-SA 4.0`. Links to the corresponding license page.
 
 ## 🐦 Social Media Settings
@@ -65,15 +67,6 @@ socialMedia:
 - Add links to your social media accounts.
 - Leave fields empty to hide specific icons.
 - Supported platforms include GitHub, LinkedIn, Instagram, Telegram, Zhihu, and more.
-
-## 📄 Page Settings
-
-```yaml
-thumbnailAbout: false
-thumbnailFriends: false
-```
-
-- **`thumbnailAbout`** and **`thumbnailFriends`**: Whether to display thumbnails for the "About" or "Friends" pages.
 
 ## 💬 Comments Settings (Disqus)
 
@@ -96,6 +89,14 @@ slotFooter: |
 
 - **`headerJavascript`**: Custom JavaScript files to be included in the `<head>` section.
 - **`slotFooter`**: Custom HTML code to be included in the `<footer>` section.
+
+## 🗓️ Header Settings
+
+```yaml
+travellings: true
+```
+
+- **`travellings`**: Wether you want to join the travellings community. For more information, visit [Travellings](https://www.travellings.cn/en_US/).
 
 ## 🗓️ Footer Settings
 

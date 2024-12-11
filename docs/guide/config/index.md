@@ -41,11 +41,13 @@ googleAnalytics: G-659VZ9NH28
 ## ✍️ 文章设置 (Posts Settings)
 
 ```yaml
+postsPerPage: 5
 creativeCommons:
   type: CC BY-SA 4.0 Deed
   link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans
 ```
 
+- **`postsPerPage`**: 每页显示的文章数量。（默认/留空为 5，最大为 15）
 - **`creativeCommons`**: 配置文章默认的版权许可，例如 `CC BY-SA 4.0`，链接到相应的许可证页面。
 
 ## 🐦 社交媒体设置 (Social Media Settings)
@@ -63,15 +65,6 @@ socialMedia:
 - 为你的社交媒体账号添加链接。
 - 留空某些字段可以隐藏对应的社交图标。
 - 支持的平台包括 GitHub、LinkedIn、Instagram、Telegram、Zhihu 等。
-
-## 📄 页面设置 (Pages Settings)
-
-```yaml
-thumbnailAbout: false
-thumbnailFriends: false
-```
-
-- **`thumbnailAbout`** 和 **`thumbnailFriends`**: 是否为“关于”页面或“友情链接”页面显示缩略图。
 
 ## 💬 评论设置 (Comments Settings)
 
@@ -94,6 +87,14 @@ slotFooter: |
 
 - **`headerJavascript`**: 在 `<head>` 中插入的自定义 JavaScript 文件。
 - **`slotFooter`**: 在 `<footer>` 中插入的自定义 HTML 代码。
+
+## 🗓️ 页头设置 (Header Settings)
+
+```yaml
+travellings: true
+```
+
+- **`travellings`**: 开往！友链接力！一个友情链接助推计划，欢迎参与。[开往项目官网](https://www.travellings.cn/)
 
 ## 🗓️ 页脚设置 (Footer Settings)
 
